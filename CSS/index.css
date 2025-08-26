@@ -43,9 +43,132 @@
 
 .quem-somos-text{
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     color: var(--bege);
 }
 
 .quem-somos-text h1{
-    
+    color: var(--verde);
+    font-size: 34px;
+}
+
+.quem-somos-text p{
+    color: var(--bege);
+    font-size: 24px;
+}
+
+.quem-somos-button button{
+    background-color: var(--verde);
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+    color: var(--azulEscuro);
+    font-weight: bold;
+
+    transition: 300ms;
+}
+
+.quem-somos-button button:hover{
+    transform: scale(0.95);
+    color: var(--azulEscuro);
+    background-color: var(--branco);
+}
+
+/* Porfólio */
+.portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+
+    background-color: var(--azulEscuro);
+}
+
+.port-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+
+    background-color: var(--azulEscuro);
+}
+
+.port-container h1{
+    color: var(--verde);
+    font-size: 34px;
+}
+
+.container-portfolio {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    /* grid-template-rows: 100px; */
+    grid-template-rows: 250px 250px;
+    gap: 3px;
+}
+
+.portfolio-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: 300ms;
+}
+
+.portfolio-item p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: var(--branco);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-item:hover p {
+    opacity: 1;
+}
+
+.portfolio-item:hover img {
+    opacity: 0.5;
+}
+
+.button-catalogo button {
+    background-color: var(--verde);
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+    color: var(--azulEscuro);
+    font-weight: bold;
+
+    transition: 300ms;
+}
+
+.button-catalogo button:hover {
+    transform: scale(0.95);
+    color: var(--azulEscuro);
+    background-color: var(--branco);
 }
